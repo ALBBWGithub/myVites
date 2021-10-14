@@ -1,52 +1,35 @@
 <script setup lang="ts">
 import { ref } from 'vue'
+import { NButton } from 'naive-ui'
+import {NScrollbar} from 'naive-ui'
 
 defineProps<{ msg: string }>()
 
-const count = ref(0)
+const count = ref(6)
 </script>
 
 <template>
+  <div class="sevtion has-text-centered">
   <h1>{{ msg }}</h1>
+  <button class="button is-rounded is-primary" @click="count++">count is: {{ count }}</button>
+ </div>
+   <n-scrollbar class="section" style="max-height: 120px;">
+    And as I sat there, brooding on the old unknown world, I thought of Gatsby’s
+    wonder when he first picked out the green light at the end of Daisy’s dock. He
+    had come a long way to this blue lawn and his dream must have seemed so close
+    that he could hardly fail to grasp it. He did not know that it was already
+    behind him, somewhere back in that vast obscurity beyond the city, where the
+    dark fields of the republic rolled on under the night.<br /><br />
 
-  <p>
-    Recommended IDE setup:
-    <a href="https://code.visualstudio.com/" target="_blank">VSCode</a>
-    +
-    <a href="https://github.com/johnsoncodehk/volar" target="_blank">Volar</a>
-  </p>
+    Gatsby believed in the green light, the orgastic future that year by year
+    recedes before us. It eluded us then, but that’s no matter—tomorrow we will
+    run faster, stretch out our arms farther. . . . And one fine morning——<br /><br />
 
-  <p>See <code>README.md</code> for more information.</p>
-
-  <p>
-    <a href="https://vitejs.dev/guide/features.html" target="_blank">
-      Vite Docs
-    </a>
-    |
-    <a href="https://v3.vuejs.org/" target="_blank">Vue 3 Docs</a>
-  </p>
-
-  <button type="button" @click="count++">count is: {{ count }}</button>
-  <p>
-    Edit
-    <code>components/HelloWorld.vue</code> to test hot module replacement.
-  </p>
+    So we beat on, boats against the current, borne back ceaselessly into the
+    past.
+  </n-scrollbar>
 </template>
 
 <style scoped>
-a {
-  color: #42b983;
-}
 
-label {
-  margin: 0 0.5em;
-  font-weight: bold;
-}
-
-code {
-  background-color: #eee;
-  padding: 2px 4px;
-  border-radius: 4px;
-  color: #304455;
-}
 </style>
